@@ -1,0 +1,7 @@
+;!@Install@!UTF-8!
+Title="Resource Provider"
+BeginPrompt="Do you want to install the Resource Provider?"
+RunProgram="start.bat"
+GUIMode="2"
+OverwriteMode="0"
+;!@InstallEnd@!

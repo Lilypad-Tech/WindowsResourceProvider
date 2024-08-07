@@ -1,0 +1,13 @@
+﻿pwd
+apk update
+apk add git wget tar libc6-compat gcompat go curl 
+#curl -OL https://get.bacalhau.org/install.sh 
+#./install.sh
+wget https://github.com/bacalhau-project/bacalhau/releases/download/v1.3.2/bacalhau_v1.3.2_linux_amd64.tar.gz
+tar xfv bacalhau_v1.3.2_linux_amd64.tar.gz
+cp bacalhau /usr/bin/bacalhau
+mkdir -p /app/data/ipfs
+chown -R $USER /app/data
+cd ~/
+rm -rf lilypad
+git clone https://github.com/Lilypad-Tech/lilypad.git

@@ -1,0 +1,4 @@
+﻿export LOG_LEVEL=debug
+cd ~/lilypad 
+export PATH=$PATH:/usr/local/go/bin
+go run . resource-provider  --offer-gpu 1 --network testnet
