@@ -8,15 +8,6 @@ Right-click on the Start button and select "Windows PowerShell (Admin)" or "Comm
 
 Run the Following Commands
 
-For WSL 1:
-
-powershell
-Copy code
-```
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-```
-For WSL 2 (which is the newer and more powerful version):
-
 powershell
 Copy code
 ```dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
