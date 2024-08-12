@@ -21,4 +21,5 @@ https://docs.docker.com/desktop/install/windows-install/
 # Step 3 Compile/Run Project
 Clone repository
 
-Open Solution File
+Open Solution File (`WindowsResourceProvider.sln`)
+
