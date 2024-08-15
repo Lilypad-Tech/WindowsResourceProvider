@@ -24,7 +24,7 @@ https://docs.docker.com/desktop/install/windows-install/
 ## 3. Compile/Run Project
 Clone this repository
 
-Open Solution File (`WindowsResourceProvider.sln`)
+Open Solution File with Visual Studio (`WindowsResourceProvider.sln`)
 
 # Resources
 - [Lilypad Docs](https://docs.lilypad.tech/lilypad)
