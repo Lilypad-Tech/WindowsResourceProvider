@@ -19,11 +19,11 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 Restart your computer to apply the changes.
 
 ## 2. Install Docker
-Navigate to the link below and install Docker Desktop for Windows
+Navigate to the following link and install Docker Desktop for Windows:
 https://docs.docker.com/desktop/install/windows-install/
 
 ## 3. Install Visual Studio
-Navigate to the link below and install Visual Studio for Windows
+Navigate to the following link and install Visual Studio for Windows:
 https://visualstudio.microsoft.com/downloads/
 
 ## 4. Compile/Run Project
