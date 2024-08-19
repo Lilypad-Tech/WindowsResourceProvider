@@ -48,6 +48,7 @@ namespace WindowsResourceProvider
             //MessageBox.Show("The form has been loaded and displayed!");
             RestoreTextBoxValue();
             bool installed = Properties.Settings.Default.installed;
+            //Install();
             if (installed == false)
             {
                 //Task.Run(async () => await Install());
@@ -58,6 +59,7 @@ namespace WindowsResourceProvider
 
             publicAddressTextBox.Text = GetPublicAddressFromPrivateKey(privateKeytextBox.Text);
             LaunchBacalhau();
+            Thread.Sleep(5000);
             Launch();
             var timer = new System.Windows.Forms.Timer();
             timer.Interval = 10000; // 10 seconds
@@ -256,46 +258,62 @@ namespace WindowsResourceProvider
                     });
                 }
             };
-            process.StartInfo.FileName = "Alpine";
-            process.StartInfo.Arguments = "clean";
-            process.StartInfo.RedirectStandardInput = true;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardError = true;
-            process.StartInfo.UseShellExecute = false;
+            //process.StartInfo.FileName = "Alpine";
+            ////process.StartInfo.Arguments = "clean";
+            //process.StartInfo.RedirectStandardInput = true;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.UseShellExecute = false;
 
-            process.Start();
+            //process.Start();
 
-            using (StreamWriter sw = process.StandardInput)
-            {
-                if (sw.BaseStream.CanWrite)
-                {
-                    sw.WriteLine("Y");
-                }
-            }
-            process.WaitForExit();
-            //Thread.Sleep(1000);
+            //using (StreamWriter sw = process.StandardInput)
+            //{
+            //    if (sw.BaseStream.CanWrite)
+            //    {
+            //        sw.WriteLine("Y");
+            //    }
+            //}
+            //process.WaitForExit();
+            ////Thread.Sleep(1000);
             progressBar1.Value = 80;
-            process.StartInfo.FileName = "Alpine";
-            process.StartInfo.RedirectStandardInput = true;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.FileName = "Alpine";
+            //process.StartInfo.RedirectStandardInput = true;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.UseShellExecute = false;
+            //process.StartInfo.CreateNoWindow = true;
+
+            //process.Start();
+
+            //using (StreamWriter sw = process.StandardInput)
+            //{
+            //    if (sw.BaseStream.CanWrite)
+            //    {
+            //        sw.WriteLine("Y");
+            //    }
+            //}
+            //process.WaitForExit();
+            process.StartInfo.FileName = "cmd";
+            process.StartInfo.Arguments = "/c echo | Alpine";
+            ////process.StartInfo.Arguments = "clean";
+            //process.StartInfo.RedirectStandardInput = true;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.RedirectStandardError = true;
             process.StartInfo.UseShellExecute = false;
-            process.StartInfo.CreateNoWindow = true;
+            process3.StartInfo.CreateNoWindow = true;
+
+            //process.Start();";
+            //process.StartInfo.RedirectStandardInput = true;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.UseShellExecute = false;
 
             process.Start();
-
-            using (StreamWriter sw = process.StandardInput)
-            {
-                if (sw.BaseStream.CanWrite)
-                {
-                    sw.WriteLine("Y");
-                }
-            }
             process.WaitForExit();
-
             string install_cmd = File.ReadAllText("install.txt");
             //string pk = "export WEB3_PRIVATE_KEY=" + privateKeytextBox.Text + ";"; // export WEB3_PRIVATE_KEY=0x0093a705313ee3e02b69fd58758ac485644c20ba4a5db0cb5c17cb8835e992b8;";
-            string command = "wsl -d Alpine " + install_cmd.Replace("\n", ";");
+            string command = "-d Alpine  " + install_cmd.Replace("\n", ";").Replace("\r", "") +";exit" ;
 
             // Create a new process
 
@@ -312,11 +330,11 @@ namespace WindowsResourceProvider
                     });
                 }
             };
-            process3.StartInfo.FileName = "cmd.exe";
-            process3.StartInfo.Arguments = $"/c {command}";
-            process3.StartInfo.RedirectStandardInput = true;
-            process3.StartInfo.RedirectStandardOutput = true;
-            process3.StartInfo.RedirectStandardError = true;
+            process3.StartInfo.FileName = "wsl";
+            process3.StartInfo.Arguments = command;
+            //process3.StartInfo.RedirectStandardInput = true;
+            //process3.StartInfo.RedirectStandardOutput = true;
+            //process3.StartInfo.RedirectStandardError = true;
             process3.StartInfo.UseShellExecute = false;
             process3.StartInfo.CreateNoWindow = true;
 
