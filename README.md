@@ -1,6 +1,8 @@
 # WindowsResourceProvider
 This installer is designed to help you set up and configure your system to provide resources to the Lilypad network. Once the installation is complete, your system will be ready to start accepting compute jobs from the Lilypad network.
 
+> **Note:** Lilypad Resource Providers are currently supported only on Linux installations. Running a Resource Provider on Windows is still experimental.
+
 # Usage
 Enabling Windows Subsystem for Linux (WSL) allows you to run a Linux distribution alongside your Windows installation. Here's how you can enable and set up WSL on your Windows machine:
 
