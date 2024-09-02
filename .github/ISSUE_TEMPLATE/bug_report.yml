@@ -1,5 +1,5 @@
 name:  "\U0001F41E Bug report"
-description: Report an issue with Lilypad
+description: Report an issue
 labels: ['triage: bug']
 body:
   - type: markdown
