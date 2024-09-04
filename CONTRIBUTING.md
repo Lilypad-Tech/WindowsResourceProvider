@@ -103,15 +103,6 @@ After creating the key pair, upload the public key to GitHub. See this [guide](h
 
 This [guide](https://vanjacosic.com/posts/sign-your-git-commits-using-ssh-keys/#testing) on signing your git commits using SSH keys shows how to test signed commits locally. If you push the commits to GitHub, you will see a “Verified” badge next to your commit.
 
-
-### Contributor license agreement
-
-We require all code contributors to sign a contributor license agreement (CLA) that grants license on contributions to Lilypad and Lilypad users. Agreement to the contributor license agreement does not restrict usage of contributions outside of this repository. See [CLA.md](CLA.md) for more details.
-
-To sign the CLA, open a pull request that adds a license accpetance entry to [Notices.md](Notices.md) and adds your GitHub username to the contributors list in [.clabot](.clabot). All commits on the pull request must be signed as described in [Signed commits](Contributing.md#signed-commits) section of this document.
-
-We will review the pull request and add you as a contributor. Agreement to the CLA is required before we merge other contributions.
-
 ### Opening the Pull Request
 
 Opening a pull request on GitHub will present you with a pull request template. Please do your best to fill out the details, but feel free to skip parts if you're not sure how to answer.
