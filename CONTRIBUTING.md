@@ -77,32 +77,6 @@ test     - add missing tests or correct existing tests
 build    - changes that affect the build system or external dependencies
 ```
 
-### Signed commits
-
-We require commits to be signed before they can be merged to `main`. Signing commits proves their authenticity.
-
-#### Create a new SSH key pair
-
-Configuring signed commits has gotten quite a bit easier now that GitHub allows you to sign with SSH keys.
-
-```yaml
-ssh-keygen -t ed25519 -C "<yourname>@example.com"
-```
-
-The last part is a comment. You could add something like “git signing key” if you want extra information to identify the key’s purpose.
-
-You’ll be asked where you want to store the key and if you want to protect it with a passphrase. Adding a passphrase is more secure, but you will need to enter it each time you commit or set up an agent to help with that.
-
-You will also need to configure `git` to use the signing key. See this [guide](https://vanjacosic.com/posts/sign-your-git-commits-using-ssh-keys/#prepare-git-for-signing) for `git` configuration options.
-
-#### Upload public key to GitHub
-
-After creating the key pair, upload the public key to GitHub. See this [guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account) and make sure to select “Signing Key” for the key type.
-
-#### Verify configuration
-
-This [guide](https://vanjacosic.com/posts/sign-your-git-commits-using-ssh-keys/#testing) on signing your git commits using SSH keys shows how to test signed commits locally. If you push the commits to GitHub, you will see a “Verified” badge next to your commit.
-
 ### Opening the Pull Request
 
 Opening a pull request on GitHub will present you with a pull request template. Please do your best to fill out the details, but feel free to skip parts if you're not sure how to answer.
